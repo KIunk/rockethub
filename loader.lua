@@ -1,6 +1,6 @@
-local player: Player = game:GetService("Players").LocalPlayer
-repeat task.wait() until player.Character
-local character = player.Character
-local humanoid = character:FindFirstChild("Humanoid")
+if game.PlaceId == "8304191830" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KIunk/rockethub/main/main.lua"))()
 
-print(humanoid.RootPart.Position)
+else
+    print("Wrong game bucko!")
+end
