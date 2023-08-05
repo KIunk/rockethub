@@ -5,7 +5,7 @@ local character = player.Character
 local humanoid = character:FindFirstChild("Humanoid")
 
 -- Setup
-local filename = "RocketHub/AA_"+ tostring(player.UserId) + ".json"
+local filename = string.format("RocketHub/AA_%s.json", tostring(player.UserId))
 if isfile(filename) ~= true then
     writefile(filename, "RocketHub.xyz")
 end
