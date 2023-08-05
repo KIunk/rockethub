@@ -9,5 +9,3 @@ local filename = "RocketHub/AA_"+ player.UserId + ".json"
 if isfile(filename) ~= true then
     writefile(filename, "RocketHub.xyz")
 end
-
--- Options
