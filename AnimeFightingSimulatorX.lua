@@ -3,9 +3,9 @@ repeat task.wait() until player.Character
 local character = player.Character
 local humanoid = character:FindFirstChild("Humanoid")
 
-getgenv.TrainAllStats = false
+getgenv().TrainAllStats = false
 
-if getgenv.TrainAllStats == true then
+if getgenv().TrainAllStats == true then
     spawn(function()
         while true do
             local args = {
@@ -27,5 +27,34 @@ if getgenv.TrainAllStats == true then
             game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
         end
     end)
-    
+    spawn(function()
+        while true do
+            local args = {
+                [1] = "TrainStat",
+                [2] = "Speed"
+            }
+            
+            game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+        end
+    end)
+    spawn(function()
+        while true do
+            local args = {
+                [1] = "TrainStat",
+                [2] = "Chakra"
+            }
+            
+            game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+        end
+    end)
+    spawn(function()
+        while true do
+            local args = {
+                [1] = "TrainStat",
+                [2] = "Sword"
+            }
+            
+            game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+        end
+    end)
 end
