@@ -10,7 +10,7 @@ local filename = string.format("RocketHub/AA_%s.json", tostring(player.UserId))
 if isfile(filename) ~= true then
     JSONData = {
         OpenGui = false,
-        AutoUseItem = false
+        AutoUseItem = {star_capsule = false, capusle_summer = false}
     }
 
     writefile(filename, HTTP:JSONEncode(JSONData))
